@@ -1,0 +1,51 @@
+﻿@using ProjetoFiap.Models
+@{
+    ViewData["Title"] = "Listagem dos alunos ativas";
+}
+
+@model List<Aluno>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @Html.ValidationSummary(true)
+    </div>
+}
+
+<h2>Listagem dos Alunos</h2>
+<a href="@Url.Action("Dados", "Aluno")" class="btn btn-primary">Novo</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Usuário</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.nome</td>
+                <td>@item.usuario</td>
+                <td class="d-flex">
+                    @if (@item.ativo == 1)
+                    {
+                        <a href="@Url.Action("Dados", "Aluno", new { id = item.id })" class="btn btn-primary">
+                            Editar
+                        </a>
+                        <form asp-action="Inativar" method="post">
+                            <input type="hidden" name="id" value="@item.id" />
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Deseja realmente deletar o aluno @item.nome?');">
+                                Deletar
+                            </button>
+                        </form>
+                    } else {
+                        <span>Aluno inativado</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

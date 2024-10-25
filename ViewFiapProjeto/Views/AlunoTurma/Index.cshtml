@@ -1,0 +1,66 @@
+﻿@using ProjetoFiap.Models
+@{
+    ViewData["Title"] = "Listagem das turmas ativas";
+    var nomeAluno = "";
+    var nomeTurma = "";
+}
+
+@model List<AlunoTurma>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @Html.ValidationSummary(true)
+    </div>
+}
+
+<h2>Listagem da Relação do Aluno com a Turma </h2>
+<a href="@Url.Action("Dados", "AlunoTurma")" class="btn btn-primary">Novo</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Aluno</th>
+            <th>Turma</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @foreach (var aluno in item.aluno)
+                    {
+                        <span>@aluno.nome</span>
+                        nomeAluno = aluno.nome;
+                    }
+                </td>
+                <td>
+                    @foreach (var turma in item.turma)
+                    {
+                        <span>@turma.turma</span>
+                        nomeTurma = turma.turma;
+                    }
+                </td>
+                <td class="d-flex">
+                    @if (@item.ativo == 1)
+                    {
+                        <a href="@Url.Action("Dados", "AlunoTurma", new { id = item.id })" class="btn btn-primary">
+                            Editar
+                        </a>
+
+                        <form asp-action="Inativar" method="post">
+                            <input type="hidden" name="id" value="@item.id" />
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Deseja realmente inativar a relação do aluno @nomeAluno com a turma @nomeTurma?');">
+                                Deletar
+                            </button>
+                        </form>
+                    } else {
+                        <span>Turma inativado</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

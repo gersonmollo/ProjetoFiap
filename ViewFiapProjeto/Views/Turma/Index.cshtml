@@ -1,0 +1,75 @@
+﻿@using ProjetoFiap.Models
+@{
+    ViewData["Title"] = "Listagem das turmas ativas";
+}
+
+@model List<Turma>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @Html.ValidationSummary(true)
+    </div>
+}
+
+<h2>Listagem de Turmas</h2>
+<a href="@Url.Action("Dados", "Turma")" class="btn btn-primary">Novo</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Curso</th>
+            <th>Turma</th>
+            <th>Ano</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @if (@item.curso_id == 1) 
+                    {
+                        <span>Curso 1</span>
+                    }
+                    else if (@item.curso_id == 2) 
+                    {
+                        <span>Curso 2</span>
+                    }
+                    else if (@item.curso_id == 3)
+                    {
+                        <span>Curso 3</span>
+                    }
+                    else if (@item.curso_id == 4)
+                    {
+                        <span>Curso 4</span>
+                    }
+                    else if (@item.curso_id == 5)
+                    {
+                        <span>Curso 5</span>
+                    }
+                </td>
+                <td>@item.turma</td>
+                <td>@item.ano</td>
+                <td class="d-flex">
+                    @if (@item.ativo == 1)
+                    {
+                        <a href="@Url.Action("Dados", "Turma", new { id = item.id })" class="btn btn-primary">
+                            Editar
+                        </a>
+
+                        <form asp-action="Inativar" method="post">
+                            <input type="hidden" name="id" value="@item.id" />
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Deseja realmente inativar a turma @item.turma?');">
+                                Deletar
+                            </button>
+                        </form>
+                    } else {
+                        <span>Turma inativado</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

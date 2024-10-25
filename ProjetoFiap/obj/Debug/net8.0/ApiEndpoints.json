@@ -1,0 +1,224 @@
+[
+  {
+    "ContainingType": "ProjetoFiap.Controllers.AlunoController",
+    "Method": "PegarPorId",
+    "RelativePath": "api/Aluno/aluno",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.AlunoController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/Aluno/cadastrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aluno",
+        "Type": "ProjetoFiap.Models.Aluno",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.AlunoController",
+    "Method": "Editar",
+    "RelativePath": "api/Aluno/editar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aluno",
+        "Type": "ProjetoFiap.Models.Aluno",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.AlunoController",
+    "Method": "Desativar",
+    "RelativePath": "api/Aluno/Inativar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.AlunoController",
+    "Method": "Listar",
+    "RelativePath": "api/Aluno/listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.AlunoTurmaController",
+    "Method": "PegarPorId",
+    "RelativePath": "api/AlunoTurma/alunoTurma",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.AlunoTurmaController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/AlunoTurma/cadastrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alunoTurma",
+        "Type": "ProjetoFiap.Models.AlunoTurma",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.AlunoTurmaController",
+    "Method": "Desativar",
+    "RelativePath": "api/AlunoTurma/desativar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.AlunoTurmaController",
+    "Method": "Editar",
+    "RelativePath": "api/AlunoTurma/editar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "alunoTurma",
+        "Type": "ProjetoFiap.Models.AlunoTurma",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.AlunoTurmaController",
+    "Method": "Listar",
+    "RelativePath": "api/AlunoTurma/listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.TurmaController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/Turma/cadastrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "turma",
+        "Type": "ProjetoFiap.Models.Turma",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.TurmaController",
+    "Method": "Desativar",
+    "RelativePath": "api/Turma/desativar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.TurmaController",
+    "Method": "Editar",
+    "RelativePath": "api/Turma/editar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "turma",
+        "Type": "ProjetoFiap.Models.Turma",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.TurmaController",
+    "Method": "Listar",
+    "RelativePath": "api/Turma/lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjetoFiap.Controllers.TurmaController",
+    "Method": "PegarPorId",
+    "RelativePath": "api/Turma/turma",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
