@@ -27,7 +27,7 @@ namespace ProjetoFiap.Tests
         }
 
         [Fact]
-        public void CadastrarAlunoSenhaIncorreta()
+        public void CadastrarAlunoTurmaJaVinculados()
         {
             AlunoTurma alunoTurma = new AlunoTurma()
             {
@@ -55,7 +55,7 @@ namespace ProjetoFiap.Tests
         }
 
         [Fact]
-        public void EditarAlunoSenhaIncorreta()
+        public void EditarAlunoTurmaJaVinculados()
         {
             AlunoTurma alunoTurma = new AlunoTurma()
             {

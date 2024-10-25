@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ViewFiapProjeto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70d255968055769468068e57a61c429715ccc265")]
 [assembly: System.Reflection.AssemblyProductAttribute("ViewFiapProjeto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ViewFiapProjeto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

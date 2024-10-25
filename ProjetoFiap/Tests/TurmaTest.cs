@@ -33,7 +33,7 @@ namespace ProjetoFiap.Tests
             Turma turma = new Turma()
             {
                 id = 0,
-                turma = "Gerson Mollo",
+                turma = "Turma 1",
                 curso_id = 1,
                 ano = 2000,
                 ativo = 1
@@ -66,7 +66,7 @@ namespace ProjetoFiap.Tests
             Turma turma = new Turma()
             {
                 id = 2,
-                turma = "Daiane Camargo",
+                turma = "Turma 1",
                 curso_id = 2,
                 ano = 2005
             };

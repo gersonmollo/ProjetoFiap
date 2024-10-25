@@ -18,7 +18,7 @@ namespace ProjetoFiap.Tests
             Aluno aluno = new Aluno()
             {
                 nome = "Teste Aluno",
-                usuario = "Teste 10",
+                usuario = "Teste 100",
                 senha = "Senha123*"
             };
 
@@ -94,6 +94,7 @@ namespace ProjetoFiap.Tests
         {
             Aluno aluno = new Aluno()
             {
+                id = 2,
                 nome = "Teste Aluno",
                 usuario = "Teste 1",
                 senha = "Senha123*"
